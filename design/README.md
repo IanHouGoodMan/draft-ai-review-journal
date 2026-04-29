@@ -5,6 +5,7 @@
 - [AI Reviewer 设计草稿：Review 阶段](./ai-review-review-stage.md)
 - [Review 输出模型草稿](./review-output-model.md)
 - [Topic Relation Graph 草稿](./topic-relation-graph.md)
+- [Confirm Flow 草稿](./confirm-flow.md)
 
 ## Scope
 
@@ -14,5 +15,6 @@ They are intended to stabilize:
 - terminology,
 - subsystem boundaries,
 - review/infer flow,
+- confirm flow,
 - output models,
 - relation models.

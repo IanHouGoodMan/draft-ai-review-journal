@@ -43,5 +43,6 @@ See also:
 - `design/ai-review-review-stage.md`
 - `design/review-output-model.md`
 - `design/topic-relation-graph.md`
+- `design/confirm-flow.md`
 - `adr/0001-use-dsl-review-as-public-engineering-journal-repository.md`
 - `adr/0002-adopt-coarse-grained-solution-boundaries.md`
