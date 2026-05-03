@@ -1,20 +1,6 @@
-# Design Index
+# Design
 
-## Current documents
+- [glossary.md](./glossary.md) � terms and contract
+- [review.md](./review.md) � Review stage
+- [confirm.md](./confirm.md) � Confirm gate
 
-- [AI Reviewer 设计草稿：Review 阶段](./ai-review-review-stage.md)
-- [Review 输出模型草稿](./review-output-model.md)
-- [Topic Relation Graph 草稿](./topic-relation-graph.md)
-- [Confirm Flow 草稿](./confirm-flow.md)
-
-## Scope
-
-These documents are public-facing design notes for the rebuilding of AI Reviewer.
-
-They are intended to stabilize:
-- terminology,
-- subsystem boundaries,
-- review/infer flow,
-- confirm flow,
-- output models,
-- relation models.

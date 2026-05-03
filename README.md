@@ -40,9 +40,10 @@ See also:
 ## Initial documents
 
 - `daily/2026-04-29-first-entry.md`
-- `design/ai-review-review-stage.md`
-- `design/review-output-model.md`
-- `design/topic-relation-graph.md`
-- `design/confirm-flow.md`
+- `design/glossary.md`
+- `design/review.md`
+- `design/confirm.md`
 - `adr/0001-use-dsl-review-as-public-engineering-journal-repository.md`
 - `adr/0002-adopt-coarse-grained-solution-boundaries.md`
+- `adr/0003-single-topic-per-draft.md`
+- `adr/0004-merge-source-and-sink.md`
