@@ -20,6 +20,7 @@ Output of Review. Fields:
 | Intent             | Intent                     | See below.                             |
 | References         | Reference[]                | May be empty.                          |
 | Description        | string                     | Natural-language explanation.          |
+| SuggestedDraft     | string?                    | Optional draft text the user can copy back to resubmit. Set when Review can propose how to fix unresolved references. |
 | ReadyForInference  | bool                       | Gate into Infer.                       |
 
 ## Topic
