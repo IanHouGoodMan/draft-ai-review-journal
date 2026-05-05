@@ -1,6 +1,6 @@
 # Glossary
 
-_Last updated: 2026-05-03_
+_Last updated: 2026-05-05_
 
 Authoritative terms used by AI Reviewer. Defined here only.
 
@@ -19,8 +19,9 @@ Output of Review. Fields:
 | Topic              | Topic                      | See below.                             |
 | Intent             | Intent                     | See below.                             |
 | References         | Reference[]                | May be empty.                          |
-| Description        | string                     | Natural-language explanation.          |
-| SuggestedDraft     | string?                    | Optional draft text the user can copy back to resubmit. Set when Review can propose how to fix unresolved references. |
+| Description        | string?                    | Optional natural-language explanation. |
+| SuggestedDraft     | string?                    | Optional draft text the user can copy back to resubmit. |
+| Issues             | ReviewIssue[]             | Empty when there is nothing to report. |
 | ReadyForInference  | bool                       | Gate into Infer.                       |
 
 ## Topic
@@ -46,6 +47,16 @@ Output of Review. Fields:
 | IsResolved    | bool                                              |
 | Description   | string                                            |
 
+## ReviewIssue
+
+User-visible note produced by Review.
+
+| Field       | Type             | Notes                                      |
+| ----------- | ---------------- | ------------------------------------------ |
+| Severity    | `Info` \| `Error` | `Error` blocks Infer.                      |
+| Message     | string           | Reason or warning.                         |
+| Missing     | Reference?       | Optional missing reference.                |
+
 ## ReadyForInference
 
 `false` if any of:
@@ -54,6 +65,8 @@ Output of Review. Fields:
 - Intent is `Unknown`
 - `Modify` or `Delete` has unresolved required reference
 - `CreateNew` depends on an existing object whose reference is unresolved
-- `Workflow` has neither source nor schema input
+- `Workflow` has no resolved `Source` with ready `SampleData`
+- Any `ReviewIssue` has severity `Error`
 
-When `false`, `Description` must state the reason.
+When `false`, `Issues` must state the reason. `Description` may restate it for
+the user.
